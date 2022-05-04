@@ -1,0 +1,12 @@
+{
+    "title": "on_research_queue_changed",
+    "version": "1.0.0",
+    "name": "on_research_queue_changed",
+    "author": "ixu",
+    "description": "provides an event called on_research_queue_changed that is raised at any change of research queue.\nIt is ment to replace on_research_cancelled, on_research_finished and on_research_started.\nIt uses the same interface as on_research_cancelled.",
+    "factorio_version": "1.1",
+    "dependencies": [
+        "base >= 1.1.0",
+        "flib >= 0.9.2"
+    ]
+}
