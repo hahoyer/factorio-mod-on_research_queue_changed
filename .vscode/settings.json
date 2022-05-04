@@ -1,0 +1,26 @@
+{
+    "Lua.diagnostics.globals": [
+        "defines",
+        "game",
+        "serpent",
+        "log",
+        "dlog",
+        "script",
+        "settings",
+        "global",
+        "currentLinks",
+        "data",
+        "__DebugAdapter",
+        "release",
+        "indent",
+        "dassert",
+        "remote",
+        "AddIndent",
+        "ResetIndent"
+    ],
+    "Lua.diagnostics.disable": [
+        "redefined-local"
+    ],
+    "factorio.package.defaultPublishBranch": "",
+    "Lua.completion.autoRequire": false
+}

@@ -1,3 +1,4 @@
+require "core.debugSupport"
 local Dictionary = {}
 local Array = {}
 

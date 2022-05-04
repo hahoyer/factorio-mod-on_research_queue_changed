@@ -1,2 +1,4 @@
-local OnResearchQueueChanged = require("core.OnResearchQueueChanged")
-local instance = OnResearchQueueChanged:new()
+local on_research_queue_changed = require "on_research_queue_changed"
+require "remote-interface"
+
+on_research_queue_changed:new()
