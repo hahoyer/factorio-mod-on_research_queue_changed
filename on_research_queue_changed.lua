@@ -44,7 +44,7 @@ function Class:AlignResearchQueueCopy(force)
         local active = self:GetResearchQueue(force)--
             :ToDictionary(function(technology) return { Key = technology, Value = true } end)
 
-        local last = self.Forces[force.index]
+        local last = Array:new(self.Forces[force.index])
             :ToDictionary(function(technology) return { Key = technology, Value = true } end)
 
         local research = {}
@@ -94,7 +94,9 @@ function Class:new()
     local self = self:adopt {}
     self:SetLatency()
     script.on_event(defines.events.on_runtime_mod_setting_changed, function(event) self:SetLatency() end)
-    script.on_event(defines.events.on_research_cancelled, function(event) self:CheckResearchQueue(event) end)
+    if defines.events.on_research_cancelled then
+        script.on_event(defines.events.on_research_cancelled, function(event) self:CheckResearchQueue(event) end)
+    end
     script.on_event(defines.events.on_research_finished, function(event) self:CheckResearchQueue(event) end)
     script.on_event(defines.events.on_research_started, function(event) self:CheckResearchQueue(event) end)
     script.on_event(defines.events.on_research_reversed, function(event) self:CheckResearchQueue(event) end)
